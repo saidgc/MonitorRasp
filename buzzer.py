@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 # Libraries
 from time import sleep
 import RPi.GPIO as GPIO

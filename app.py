@@ -1,4 +1,6 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+
 import json
 from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler
