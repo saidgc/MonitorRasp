@@ -3,7 +3,9 @@ import json
 from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler
 from tweepy import Stream
+
 import apikeys
+import Buzzer
 
 
 class StdOutListener(StreamListener):
@@ -26,6 +28,7 @@ class DataParser:
             text = jso['text']
             date = jso['created_at']
             print(text)
+            Buzzer.times(1)
         except Exception as e:
             print("Error 123", e)
 
@@ -37,4 +40,4 @@ if __name__ == '__main__':
     stream = Stream(auth, listener)
 
     # stream.filter(track=['#TenemosSismo', '#sasmex', '#TenemosAlerta', '#AlertaSísmica'])
-    stream.filter(track=['#DiaDeLaHamburguesa'])
+    stream.filter(track=['#MORENAGobiernaMal'])
