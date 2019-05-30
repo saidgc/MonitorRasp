@@ -5,7 +5,7 @@ from tweepy import OAuthHandler
 from tweepy import Stream
 
 import apikeys
-import Buzzer
+import buzzer
 
 
 class StdOutListener(StreamListener):
@@ -28,7 +28,7 @@ class DataParser:
             text = jso['text']
             date = jso['created_at']
             print(text)
-            Buzzer.times(1)
+            buzzer.times(1)
         except Exception as e:
             print("Error 123", e)
 

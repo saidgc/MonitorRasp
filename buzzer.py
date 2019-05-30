@@ -1,18 +1,18 @@
-#Libraries
-import RPi.GPIO as GPIO
+# Libraries
 from time import sleep
-#Disable warnings (optional)
+import RPi.GPIO as GPIO
+
 GPIO.setwarnings(False)
-#Select GPIO mode
 GPIO.setmode(GPIO.BCM)
-#Set buzzer - pin 23 as output
-buzzer=23
-GPIO.setup(buzzer,GPIO.OUT)
-#Run forever loop
-while True:
-  GPIO.output(buzzer,GPIO.HIGH)
-  print ("Beep")
-  sleep(0.5) # Delay in seconds
-  GPIO.output(buzzer,GPIO.LOW)
-  print ("No Beep")
-  sleep(0.5)
+buzzer = 23
+GPIO.setup(buzzer, GPIO.OUT)
+
+
+def times(n):
+    for i in range(n):
+        GPIO.output(buzzer, GPIO.HIGH)
+        print("Beep")
+        sleep(0.5)
+        GPIO.output(buzzer, GPIO.LOW)
+        print("No Beep")
+        sleep(0.5)
