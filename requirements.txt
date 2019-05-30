@@ -1,1 +1,11 @@
+certifi
+chardet
+idna
+oauthlib
+PySocks
+requests
+requests-oauthlib
+RPi.GPIO
+six
 tweepy
+urllib3
